@@ -1,0 +1,15 @@
+C:\dev\2025\hexagonal-bookstore\src\main\java\com\example\hexagonalbookstore\HexagonalBookstoreApplication.java
+C:\dev\2025\hexagonal-bookstore\src\main\java\com\example\hexagonalbookstore\infrastructure\adapters\output\BookJpaRepository.java
+C:\dev\2025\hexagonal-bookstore\src\main\java\com\example\hexagonalbookstore\application\services\BookService.java
+C:\dev\2025\hexagonal-bookstore\src\main\java\com\example\hexagonalbookstore\infrastructure\adapters\input\dto\BookRequestDTO.java
+C:\dev\2025\hexagonal-bookstore\src\main\java\com\example\hexagonalbookstore\application\ports\input\BookServicePort.java
+C:\dev\2025\hexagonal-bookstore\src\main\java\com\example\hexagonalbookstore\domain\model\Book.java
+C:\dev\2025\hexagonal-bookstore\src\main\java\com\example\hexagonalbookstore\infrastructure\config\OpenApiConfig.java
+C:\dev\2025\hexagonal-bookstore\src\main\java\com\example\hexagonalbookstore\infrastructure\adapters\input\mapper\BookMapper.java
+C:\dev\2025\hexagonal-bookstore\src\main\java\com\example\hexagonalbookstore\infrastructure\adapters\output\BookJpaAdapter.java
+C:\dev\2025\hexagonal-bookstore\src\main\java\com\example\hexagonalbookstore\application\ports\output\BookRepositoryPort.java
+C:\dev\2025\hexagonal-bookstore\src\main\java\com\example\hexagonalbookstore\domain\exception\BookNotFoundException.java
+C:\dev\2025\hexagonal-bookstore\src\main\java\com\example\hexagonalbookstore\infrastructure\config\BookApiSpec.java
+C:\dev\2025\hexagonal-bookstore\src\main\java\com\example\hexagonalbookstore\infrastructure\adapters\input\BookController.java
+C:\dev\2025\hexagonal-bookstore\src\main\java\com\example\hexagonalbookstore\infrastructure\adapters\input\dto\BookResponseDTO.java
+C:\dev\2025\hexagonal-bookstore\src\main\java\com\example\hexagonalbookstore\infrastructure\adapters\input\exception\GlobalExceptionHandler.java

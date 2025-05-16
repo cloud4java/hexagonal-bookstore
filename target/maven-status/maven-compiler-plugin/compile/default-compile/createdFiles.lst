@@ -1,0 +1,12 @@
+com\example\hexagonalbookstore\infrastructure\adapters\output\BookJpaAdapter.class
+com\example\hexagonalbookstore\infrastructure\adapters\input\dto\BookRequestDTO.class
+com\example\hexagonalbookstore\infrastructure\adapters\input\dto\BookResponseDTO.class
+com\example\hexagonalbookstore\domain\model\Book.class
+com\example\hexagonalbookstore\infrastructure\adapters\input\exception\GlobalExceptionHandler$ErrorResponse.class
+com\example\hexagonalbookstore\HexagonalBookstoreApplication.class
+com\example\hexagonalbookstore\infrastructure\adapters\input\exception\GlobalExceptionHandler.class
+com\example\hexagonalbookstore\infrastructure\adapters\input\mapper\BookMapper.class
+com\example\hexagonalbookstore\infrastructure\adapters\output\BookJpaRepository.class
+com\example\hexagonalbookstore\application\ports\output\BookRepositoryPort.class
+com\example\hexagonalbookstore\domain\exception\BookNotFoundException.class
+com\example\hexagonalbookstore\infrastructure\config\OpenApiConfig.class
