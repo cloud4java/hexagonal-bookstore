@@ -9,12 +9,12 @@ import org.springframework.stereotype.Component;
 public class BookMapper {
     
     public Book toEntity(BookRequestDTO dto) {
-        Book book = new Book();
-        book.setTitle(dto.getTitle());
-        book.setAuthor(dto.getAuthor());
-        book.setIsbn(dto.getIsbn());
-        book.setPrice(dto.getPrice());
-        return book;
+        return new Book(
+            dto.getTitle(),
+            dto.getAuthor(),
+            dto.getIsbn(),
+            dto.getPrice()
+        );
     }
     
     public BookResponseDTO toDTO(Book book) {

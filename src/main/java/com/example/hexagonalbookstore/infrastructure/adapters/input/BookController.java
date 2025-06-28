@@ -41,7 +41,7 @@ public class BookController {
         log.info("Fetching book with id: {}", id);
         return bookServicePort.getBook(id)
                 .map(book -> ResponseEntity.ok(bookMapper.toDTO(book)))
-                .orElseThrow(() -> new BookNotFoundException(id));
+                .orElseThrow(() -> new BookNotFoundException("Book not found with id: " + id));
     }
     
     @GetMapping
@@ -52,28 +52,28 @@ public class BookController {
                 .collect(Collectors.toList());
         return ResponseEntity.ok(books);
     }
-    
-    @PutMapping("/{id}")
+      @PutMapping("/{id}")
     public ResponseEntity<BookResponseDTO> updateBook(@PathVariable Long id, @Valid @RequestBody BookRequestDTO bookDTO) {
         log.info("Updating book with id: {}", id);
-        return bookServicePort.getBook(id)
-                .map(existingBook -> {
-                    Book book = bookMapper.toEntity(bookDTO);
-                    book.setId(id);
-                    Book updatedBook = bookServicePort.updateBook(book);
-                    return ResponseEntity.ok(bookMapper.toDTO(updatedBook));
-                })
-                .orElseThrow(() -> new BookNotFoundException(id));
+        Book existingBook = bookServicePort.getBook(id)
+            .orElseThrow(() -> new BookNotFoundException("Book not found with id: " + id));
+        
+        Book updateBook = new Book(
+            bookDTO.getTitle(),
+            bookDTO.getAuthor(),
+            bookDTO.getIsbn(),
+            bookDTO.getPrice()
+        );
+        updateBook.setId(id);
+        
+        Book updatedBook = bookServicePort.updateBook(updateBook);
+        return ResponseEntity.ok(bookMapper.toDTO(updatedBook));
     }
     
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteBook(@PathVariable Long id) {
         log.info("Deleting book with id: {}", id);
-        return bookServicePort.getBook(id)
-                .map(book -> {
-                    bookServicePort.deleteBook(id);
-                    return ResponseEntity.noContent().<Void>build();
-                })
-                .orElseThrow(() -> new BookNotFoundException(id));
+        bookServicePort.deleteBook(id);
+        return ResponseEntity.noContent().build();
     }
 }
